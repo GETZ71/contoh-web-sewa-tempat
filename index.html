@@ -15,7 +15,7 @@
         }
         header {
             display: flex;
-            align-items: center; /* Menyelaraskan elemen secara vertikal */
+            align-items: center;
             justify-content: center;
             background-color: #000;
             padding: 20px;
@@ -23,33 +23,34 @@
             position: relative;
         }
         .header-container {
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
         .logo {
-            height: 250px; /* Atur tinggi logo sesuai kebutuhan */
-            margin-right: 15px; /* Jarak antara logo dan teks */
+            height: 150px;
+            margin-right: 15px;
             position: absolute;
-            left: 100px; /* Menempatkan logo di kiri */
-            top: 20px; /* Geser ke bawah sejauh 20px */
-            z-index: 9999; /* Menempatkan logo di depan semua elemen */
+            left: 10px;
+            top: 20px;
+            z-index: 9999;
         }
         .header-text {
             text-align: center;
             flex-grow: 1;
+            padding: 10px;
         }
         header h1 {
             color: #fff;
-            font-size: 36px;
+            font-size: 28px;
             margin: 0;
             text-decoration: underline;
         }
         header p {
-             font-size: 15px;
-             color: white;
-             margin: 5px 0;
+            font-size: 14px;
+            color: white;
+            margin: 5px 0;
         }
         nav {
             text-align: center;
@@ -59,8 +60,8 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
+            margin: 0 15px;
+            font-size: 16px;
             font-weight: bold;
             text-transform: uppercase;
         }
@@ -69,10 +70,10 @@
         }
         .hero {
             position: relative;
-            background-image: url('your-image.jpg'); /* Replace with your image */
+            background-image: url('your-image.jpg');
             background-size: cover;
             background-position: center;
-            height: 800px;
+            height: 500px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -81,17 +82,16 @@
             flex-direction: column;
         }
         .hero h2 {
-            font-size: 48px;
+            font-size: 36px;
             margin: 0;
-            color: white;
         }
         .hero .cta {
             background-color: #d4af37;
             color: #fff;
-            padding: 15 30px;
+            padding: 15px 30px;
             border-radius: 5px;
             text-decoration: none;
-            font-size: 30px;
+            font-size: 18px;
             margin-top: 20px;
             cursor: pointer;
         }
@@ -99,12 +99,12 @@
             background-color: #b38d2d;
         }
         section {
-            padding: 80px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
         section h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
+            font-size: 28px;
+            margin-bottom: 20px;
             color: #111;
         }
         .about-container {
@@ -165,7 +165,13 @@
         .contact-text {
             margin-bottom: 50px; /* Menaikkan posisi teks kontak */
         }
-        
+        .footer {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
         .virtual-tour-btn {
             background-color: #ffffff;
             color: #000;
@@ -219,19 +225,54 @@
             background-color: darkred;
         }
 
-
-        .footer {
-            background-color: #111;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
         .footer a {
             color: #d4af37;
             text-decoration: none;
         }
         .footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+            .logo {
+                height: 100px;
+            }
+            .hero h2 {
+                font-size: 28px;
+            }
+            .hero .cta {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h2 {
+                font-size: 24px;
+            }
+            header h1 {
+                font-size: 20px;
+            }
+            nav a {
+                font-size: 14px;
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
@@ -240,12 +281,12 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-        <img src="logo-EV-animasi.gif" alt="EV Venue Logo" class="logo">
-        <div class="header-text">
-            <h1>EV Venue ( CONTOH DESAIN WEB )</h1>
-            <p>Jl. Merkurius no. 45 Cipanggulaan Bandung Barat</p>
+            <img src="logo-EV-animasi.gif" alt="EV Venue Logo" class="logo">
+            <div class="header-text">
+                <h1>EV Venue ( CONTOH DESAIN WEB )</h1>
+                <p>Jl. Merkurius no. 45 Cipanggulaan Bandung Barat</p>
+            </div>
         </div>
-    </div>
     </header>
 
     <!-- Navigation -->
@@ -283,34 +324,33 @@
        }
     </style>
 
+
+
     <!-- Tentang Kami Section -->
     <section id="about">
         <h2>Tentang Kami</h2>
-        <p>EV Venue adalah tempat pesta eksklusif yang menawarkan pengalaman mewah untuk berbagai acara penting. Dengan desain yang elegan dan layanan terbaik, kami memastikan setiap acara menjadi tak terlupakan.</p>
-         <img src="about-us.jpg" alt="Tentang Kami"> <!-- Ganti dengan gambar tentang venue -->
+        <p>EV Venue adalah tempat pesta eksklusif yang menawarkan pengalaman mewah untuk berbagai acara penting.</p>
+        <img src="about-us.jpg" alt="Tentang Kami">
     </section>
 
     <!-- Layanan Section -->
     <section id="services">
         <h2>Layanan Kami</h2>
         <div class="service-grid">
-            <!-- Wedding Venue -->
             <div class="service-item">
-                <img src="wedding-venue.jpg" alt="Wedding Venue"> <!-- Replace with your image -->
+                <img src="wedding-venue.jpg" alt="Wedding Venue">
                 <h3>Pernikahan</h3>
-                <p>Venue indah untuk hari spesial Anda. Dengan layanan lengkap dan dekorasi elegan.</p>
+                <p>Venue indah untuk hari spesial Anda.</p>
                 <a href="https://wa.me/yourwhatsappphonenumber" class="cta-button">Pesan Sekarang</a>
             </div>
-            <!-- Corporate Events -->
             <div class="service-item">
-                <img src="corporate-event.jpg" alt="Corporate Events"> <!-- Replace with your image -->
+                <img src="corporate-event.jpg" alt="Corporate Events">
                 <h3>Acara Perusahaan</h3>
-                <p>Fasilitas premium untuk konferensi dan acara perusahaan dengan layanan profesional.</p>
+                <p>Fasilitas premium untuk konferensi dan acara perusahaan.</p>
                 <a href="https://wa.me/yourwhatsappphonenumber" class="cta-button">Pesan Sekarang</a>
             </div>
-            <!-- Private Parties -->
             <div class="service-item">
-                <img src="private-party.jpg" alt="Private Parties"> <!-- Replace with your image -->
+                <img src="private-party.jpg" alt="Private Parties">
                 <h3>Pesta Pribadi</h3>
                 <p>Desain custom untuk pesta pribadi dengan tema dan hiburan pilihan Anda.</p>
                 <a href="https://wa.me/yourwhatsappphonenumber" class="cta-button">Pesan Sekarang</a>
@@ -321,15 +361,14 @@
     <!-- Galeri Section -->
     <section id="gallery">
         <h2>Galeri</h2>
-        <p>Lihat beberapa momen tak terlupakan di EV Venue.</p>
         <div class="gallery-grid">
-            <img src="gallery1.jpg" alt="Galeri 1"> <!-- Ganti dengan gambar venue -->
-            <img src="gallery2.jpg" alt="Galeri 2"> 
-            <img src="gallery3.jpg" alt="Galeri 3"> 
-            <img src="gallery4.jpg" alt="Galeri 4"> 
-            <img src="gallery5.jpg" alt="Galeri 5"> 
-            <img src="gallery6.jpg" alt="Galeri 6"> 
-         </div>
+            <img src="gallery1.jpg" alt="Galeri 1">
+            <img src="gallery2.jpg" alt="Galeri 2">
+            <img src="gallery3.jpg" alt="Galeri 3">
+            <img src="gallery4.jpg" alt="Galeri 4">
+            <img src="gallery5.jpg" alt="Galeri 5">
+            <img src="gallery6.jpg" alt="Galeri 6">
+        </div>
     </section>
 
     <!-- Testimoni Section -->
@@ -340,6 +379,7 @@
         <img src="testimoni.jpg" alt="testimoni"> <!-- Ganti dengan gambar venue -->
     </section>
 
+
     <!-- Kontak Section -->
     <section id="contact">
         <h2>Kontak Kami</h2>
@@ -347,12 +387,13 @@
         <a href="https://wa.me/yourwhatsappphonenumber" class="cta-button">Hubungi Kami di WhatsApp</a>
     </section>
 
+
     <!-- Footer -->
     <div class="footer">
         <p>&copy; 2025 EV Venue. Semua hak dilindungi. | <a href="#">Kebijakan Privasi</a> | <a href="#">Kontak</a></p>
     </div>
-     
-      <script>
+
+    <script>
         function openModal() {
             document.getElementById("videoModal").style.display = "flex";
             document.getElementById("tourVideo").play();
@@ -363,6 +404,7 @@
             document.getElementById("tourVideo").pause();
         }
     </script>
+
 
 </body>
 </html>
